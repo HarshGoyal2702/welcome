@@ -80,9 +80,6 @@ body {
   font-size: 1.5rem;
 }
 
-.event-name {
-}
-
 .tagline {
   margin-top: 2px;
   font-size: 15px;
@@ -265,4 +262,75 @@ canvas#confetti {
   font-size: 18px;
   margin-top: 10px;
   line-height: 30px;
+}
+
+.profile-desk{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  padding: 2vh;
+  background-color: #ecc866dc;
+  border-radius: 2%;
+  margin-bottom: 6px;
+}
+.image{
+  width: 180px;
+  height: 170px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-data{
+  width: 100%;
+  height: 120px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.profile-data h1{
+  font-size: 1.5vw;
+}
+
+.loop {
+  display: flex; /* Use flexbox to lay out the children */
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Optional: add some space between the image and the paragraph */
+  justify-content: center;
+  margin-top: -5%;
+}
+
+.loop img {
+  display: block; /* Ensure the image is block-level to remove bottom margin caused by inline display */
+  max-width: 100px; /* Adjust the size of the image as needed */
+  height: 60px; /* Maintain aspect ratio */
+margin-bottom: 2%;
+}
+.text {
+  width: 100%;
+  font-size: 13px;
+  padding: 0 2px;
+  font-weight:500;
+}
+@media (max-width: 480px) {
+  .profile-data h1, .text {
+    font-size: 3vw; /* Slightly larger font for better readability */
+  }
+  .profile-desk .image{
+    width: 150px;
+    height: 100px;
+  }
+  .profile-data .text{
+    width: 100% ;
+    font-size: 10px;
+    margin-top: -8px;
+  }
 }
